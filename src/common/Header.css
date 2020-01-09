@@ -1,0 +1,103 @@
+:root{
+    --main-color: rgb(0,186,185);
+    --main-gray: #7F7F7F; 
+}
+.Header-top{
+    padding-top: 14px;
+}
+.Media{
+    display: flex;
+    padding: 20px 0px 10px 0px;
+}
+.Media-text{
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Media-text h6{
+    margin: 0;
+    padding: 0;
+}
+.Media-text p{
+    color: var(--main-gray);
+    font-size: 12px;
+    font-weight: bold;
+}
+.Header-bottom{
+    background-color: var(--main-color);
+}
+.Header-bottom ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.left-nav{
+    display: inline-block;
+}
+.Header-bottom .left-nav li{
+    position: relative;
+}
+.Header-bottom .left-nav  ul li a{
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.Header-bottom .left-nav  ul li a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: var(--main-color);
+    transition: .3s ease;
+}
+.Header-bottom .left-nav ul a:hover:before{
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-color: var(--main-color);
+}
+.right-nav{
+    float: right;
+    position: relative;
+}
+.right-nav .container{
+    display: flex;
+}
+.right-nav .container div{
+    padding: 12px 10px;
+}
+.right-nav a{
+    color: white;
+}
+.Language a:hover{
+    text-decoration: none;
+    color: white;
+}
+.Dropdown-language{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+}
+.Dropdown-language li a{
+    display: block;
+    padding: 14px 16px;
+}
+.Dropdown-language li a:hover{
+    background-color: white;
+    color: black;
+    transition: .3s ease;
+}
+.Language:hover .Dropdown-language{
+    visibility: visible;
+    transition: .3s ease;
+}
