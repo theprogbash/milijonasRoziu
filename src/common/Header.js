@@ -44,39 +44,45 @@ class Header extends Component {
                         </div>
                     </div>
                     <nav className="Header-bottom">
-                        <div className="left-nav">
-                            <div className="container">
+                        <div className="container">
+                            <div className="Left-nav">
                                 <ul>
-                                    <li><a href="#">Main page</a></li>
+                                    <li><a href="#" className="active-nav-element">Main page</a></li>
                                     <li><a href="#">Catalog</a></li>
                                     <li><a href="#">Contact</a></li>
                                     <li><a href="#">Gift Wrapping</a></li>
                                     <li><a href="#" className="dropdown-toggle">Catalog</a></li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className="right-nav">
-                            <div className="container">
-                                <div className="Language">
-                                    <a href="#">En</a>
-                                    <ul className="Dropdown-language">
-                                        <li><a href="#">Az</a></li>
-                                        <li><a href="#">Ru</a></li>
-                                    </ul>
-                                </div>
-                                <div className="Search">
-                                    <img src={require('../assets/img/search.png')} alt=""/>
-                                </div>
-                                <div className="User">
-                                    <img src={require('../assets/img/user.png')} alt=""/>
-                                </div>
-                                <div className="Basket">
-                                    <img src={require('../assets/img/bag.png')} alt=""/>
+                            <div className="Right-nav">
+                                <div className="container">
+                                    <div className="Language">
+                                            <a href="#" className="Current-lang">En</a>
+                                            <ul className="Dropdown-language">
+                                                <li><a href="#">Az</a></li>
+                                                <li><a href="#">Ru</a></li>
+                                            </ul>
+                                        </div>
+                                    <div className="Search">
+                                            <img src={require('../assets/img/search.png')} alt=""/>
+                                        </div>
+                                    <div className="User">
+                                            <img src={require('../assets/img/user.png')} alt=""/>
+                                            <ul className="Dropdown-user">
+                                                <li><a href="#">Login</a></li>
+                                                <li><a href="#">Register</a></li>
+                                                <li><a href="#">Wishlist</a></li>
+                                            </ul>
+                                        </div>
+                                    <div className="Basket">
+                                            <img src={require('../assets/img/bag.png')} alt=""/>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                     </nav>
                 </header>
+                <header className="Mobile-nav"></header>
             </div>
         );
     }

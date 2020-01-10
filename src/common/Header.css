@@ -2,6 +2,22 @@
     --main-color: rgb(0,186,185);
     --main-gray: #7F7F7F; 
 }
+.active-nav-element{
+    background-color: white;
+    color: var(--main-color) !important;
+}
+.active-nav-element:before{
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-color: var(--main-color);
+}
+.custom-container{
+    padding: 0px 50px;
+}
 .Header-top{
     padding-top: 14px;
 }
@@ -33,26 +49,26 @@
     list-style-type: none;
     display: flex;
 }
-.left-nav{
+.Left-nav{
     display: inline-block;
 }
-.Header-bottom .left-nav li{
+.Header-bottom .Left-nav li{
     position: relative;
 }
-.Header-bottom .left-nav  ul li a{
+.Header-bottom .Left-nav  ul li a{
     display: block;
     padding: 14px 20px;
     color: white;
     font-weight: bold;
     font-size: 14px;
 }
-.Header-bottom .left-nav  ul li a:hover{
+.Header-bottom .Left-nav  ul li a:hover{
     text-decoration: none;
     background-color: white;
     color: var(--main-color);
     transition: .3s ease;
 }
-.Header-bottom .left-nav ul a:hover:before{
+.Header-bottom .Left-nav ul a:hover:before{
     content: " ";
     height: 2px;
     width: 100%;
@@ -61,20 +77,23 @@
     left: 0;
     background-color: var(--main-color);
 }
-.right-nav{
+.Right-nav{
     float: right;
     position: relative;
 }
-.right-nav .container{
+.Right-nav img:hover{
+    cursor: pointer;
+}
+.Right-nav .container{
     display: flex;
 }
-.right-nav .container div{
+.Right-nav .container div{
     padding: 12px 10px;
 }
-.right-nav a{
+.Right-nav a{
     color: white;
 }
-.Language a:hover{
+.Language a:hover, .User a:hover{
     text-decoration: none;
     color: white;
 }
@@ -88,16 +107,30 @@
     top: 100%;
     left: 10px;
 }
-.Dropdown-language li a{
-    display: block;
-    padding: 14px 16px;
+.Dropdown-user{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 70px;
 }
-.Dropdown-language li a:hover{
+.Dropdown-language li a, .Dropdown-user li a{
+    display: block;
+    padding: 5px 16px;
+}
+.Dropdown-language li a:hover, .Dropdown-user li a:hover{
     background-color: white;
     color: black;
     transition: .3s ease;
 }
-.Language:hover .Dropdown-language{
+.Language:hover .Dropdown-language, .User:hover .Dropdown-user{
     visibility: visible;
+    transition: .3s ease;
+}
+.Language:hover .Current-lang{
+    color: black;
     transition: .3s ease;
 }
