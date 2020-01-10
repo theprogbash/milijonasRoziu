@@ -129,6 +129,7 @@
 .Language:hover .Dropdown-language, .User:hover .Dropdown-user{
     visibility: visible;
     transition: .3s ease;
+    z-index: 10;
 }
 .Language:hover .Current-lang{
     color: black;
