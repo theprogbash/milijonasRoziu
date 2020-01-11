@@ -36,6 +36,7 @@
     width: 60%;
     height: 35px;
     border-radius: 20px;
+    border: none;
 }
 .Products-header{
     padding: 40px 0px;
@@ -61,6 +62,7 @@
 .Product-card{
     width: 100%;
     border: 1px solid transparent;
+    margin-bottom: 40px;
 }
 .Product-card-overlay{
     position: absolute;
@@ -129,7 +131,7 @@
     display: flex;
     justify-content: space-evenly;
 }
-.Product-buy-ops button{
+.Product-buy-ops button, .Email-sub-button{
     background-color: #f99;
     border: none;
     width: 60px;
@@ -144,4 +146,103 @@
 .Product-price{
     font-family: Cookie;
     font-size: 1.5em;
+}
+.Products-bottom-description{
+    font-size: 12px;
+}
+.Read-more{
+    height: 35px;
+    border: none;
+    background-color: #f99;
+    border-radius: 20px;
+    width: 140px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9em;
+}
+.Product-bottom-img1{
+    background: url("../assets/img/50percentbg1.jpg");
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100% !important;
+}
+.Product-bottom-img2{
+    background: url("../assets/img/50percentbg2.png");
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100% !important;
+}
+.Products-bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Products-bottom div{
+    width: 50%;
+}
+.Products-bottom section{
+    width: 85%;
+    margin: auto;
+    padding-top: 100px;
+}
+.Best-sellers{
+    padding-top: 110px;
+}
+.Best-seller{
+    background: url("../assets/img/best-seller.png");
+    height: 450px;
+    background-repeat: no-repeat;
+}
+.Follow-section{
+    margin-top: 40px;
+}
+.Follow-section-header{
+    font-size: .9em;
+    color: white;
+    background-color: #00CCCC;
+}
+.Follow-section-header p{
+    padding: 5px 0;
+    margin: 0;
+    font-weight: bold;
+}
+.Follow-section-cover img{
+    width: 100%;
+}
+.Subscribe-box{
+    width: 70%;
+    height: 160px;
+    border: 1px solid #f99;
+    margin: 160px auto;
+    padding: 40px 40px;
+    position: relative;
+}
+.Subscribe-box-inputs{
+    display: flex;
+}
+.Subscribe-box-inputs button{
+    color: white;
+    margin-left: 15px;
+}
+.Subscribe-box-inputs input{
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: #EFEFEF;
+    color: #999999;
+    padding-left: 20px;
+    outline: none;
+    width: 50%;
+}
+.Right-subscribe-box{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 40px;
 }
