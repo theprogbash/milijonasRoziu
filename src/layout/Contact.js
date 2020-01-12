@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import './Contact.css';
+import Breadcrumb from '../common/Breadcrumb';
 
 class Contact extends Component{
     render(){
         return(
             <div className="Contact">
                 <div className="container">
-                    <nav className="Contact-breadcrumb">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li> > </li>
-                            <li className="Current-page">Contact</li>
-                        </ul>
-                    </nav>
+                    <Breadcrumb currentPage="Contact"/>
                     <div className="Contact-map-container">
                         <div className="mapouter"><div className="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe></div></div>
                     </div>

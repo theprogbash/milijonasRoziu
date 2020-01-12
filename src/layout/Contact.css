@@ -3,25 +3,6 @@
     width: 70%;
     background-color: #EAEAEA;
 }
-.Contact-breadcrumb{
-    padding: 40px 0px;
-}
-.Contact-breadcrumb ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.Contact-breadcrumb li{
-    display: inline-block;
-    padding-right: 5px;
-    font-size: .9em;
-}
-.Contact-breadcrumb li a{
-    color: black;
-}
-.Current-page{
-    color: #777777;
-}
 .Contact-left-row{
     font-size: .9em;
     padding: 10px 0px;

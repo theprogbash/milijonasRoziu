@@ -1,0 +1,23 @@
+.Pagination{
+    margin: 30px 0px;
+}
+.Pagination ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Pagination a{
+    display: inline-block;
+    padding: 5px 15px;
+    color: #333;
+    border: 1px solid lightgray;
+    margin: 0 3px;
+}
+.Pagination a:hover{
+    color: #f99;
+    border: 1px solid #f99;
+    text-decoration: none;
+}

@@ -41,7 +41,7 @@ class Footer extends Component{
                             <div className="Footer-search-container">
                                 <h5>Search</h5>
                                 <div className="Search-container" placeholder="Search...">
-                                    <input type="text"/>
+                                    <input type="text" placeholder="Search..."/>
                                     <button><FontAwesomeIcon icon={faSearch}/></button>
                                 </div>
                             </div>

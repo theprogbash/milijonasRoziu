@@ -4,6 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Header from './common/Header';
 import Footer from './common/Footer';
 import MainPage from './layout/MainPage';
+import GiftWrapping from './layout/GiftWrapping';
 import Contact from './layout/Contact';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <Header />
       {/* <MainPage /> */}
-      <Contact />
+      {/* <Contact /> */}
+      <GiftWrapping />
       <Footer />
     </div>
   );
