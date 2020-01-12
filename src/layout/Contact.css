@@ -1,0 +1,75 @@
+.Div-wrapper{
+    height: 1px;
+    width: 70%;
+    background-color: #EAEAEA;
+}
+.Contact-breadcrumb{
+    padding: 40px 0px;
+}
+.Contact-breadcrumb ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.Contact-breadcrumb li{
+    display: inline-block;
+    padding-right: 5px;
+    font-size: .9em;
+}
+.Contact-breadcrumb li a{
+    color: black;
+}
+.Current-page{
+    color: #777777;
+}
+.Contact-left-row{
+    font-size: .9em;
+    padding: 10px 0px;
+}
+.Contact-left-row label, .Contact-right-row label{
+    font-weight: bold;
+    color: #333333;
+}
+.Contact-user-credentials{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Contact-user-credentials input{
+    width: 48%;
+    margin-bottom: 10px;
+    outline-color: red;
+    outline-width: 2px;
+    font-size: .9em;
+    padding: 5px 10px;
+    border: 1px solid #CCCCCC;
+}
+.Contact-user-message textarea{
+    width: 100%;
+    outline-color: red;
+    outline-width: 2px;
+    font-size: .9em;
+    padding-left: 10px;
+    border: 1px solid #CCCCCC;
+    resize: vertical;
+}
+.Contact-container{
+    padding: 60px 0px;
+    width: 80%;
+    margin: auto;
+}
+
+.Contact-button-container{
+    padding-top: 20px;
+}
+.Contact-button-container button{
+    float: right;
+    height: 35px;
+    width: 20%;
+    background-color: #f99;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    line-height: 35px;
+}
