@@ -13,6 +13,7 @@
 }
 .Left-side-footer img{
     max-width: 100px;
+    padding-bottom: 20px;
 }
 .Footer a, .Footer p{
     color: white;
