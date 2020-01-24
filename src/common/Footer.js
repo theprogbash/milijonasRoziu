@@ -18,7 +18,7 @@ class Footer extends Component{
                                 <li><a href="tel:+994(12)538 57 84">+994(12)538 57 84</a></li>
                                 <li><a href="tel:+994(12)538 57 84">+994(12)538 57 84</a></li>
                                 <li><a href="tel:+994(12)538 57 84">+994(12)538 57 84</a></li>
-                                <li><p>Parlament pr. 52F</p></li>
+                                <li><p>Parlament pr. 52</p></li>
                                 <li><a href="mailto:kamranmzam@code.edu.az">kamranmzam@code.edu.az</a></li>
                                 <li className="Language-dropdown-footer"><p>English</p></li>
                             </ul>
