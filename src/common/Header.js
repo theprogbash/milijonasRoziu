@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
+import SearchOverlay from '../common/SearchOverlay';
 import './Header.css';
 import logo from '../assets/img/logo.png';
+import {
+    Link, 
+    withRouter
+} from 'react-router-dom';
 
 class Header extends Component {
     render() {
+        function ShowSearchOverlay(e){
+            e.preventDefault();
+            let SearchOverlay = document.getElementsByClassName("Search-overlay")[0];
+            SearchOverlay.style.display = "flex";
+        }
+
         return (
             <div className="Header">
+                <SearchOverlay/>
                 <header>
                     <div className="container">
                         <div className="Header-top">
@@ -19,7 +31,7 @@ class Header extends Component {
                                     </div>
                                     <div className="Media-text">
                                         <h6>Delivery</h6>
-                                        <p>Completely free within the city</p>
+                                        <p>Completely free within the <br/>city</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 col-md-6 col-sm-12 Media">
@@ -44,16 +56,26 @@ class Header extends Component {
                         </div>
                     </div>
                     <nav className="Header-bottom">
-                        <div className="container">
-                            <div className="Left-nav">
-                                <ul>
-                                    <li><a href="#" className="active-nav-element">Main page</a></li>
-                                    <li><a href="#">Catalog</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Gift Wrapping</a></li>
-                                    <li><a href="#" className="dropdown-toggle">Catalog</a></li>
-                                </ul>
-                            </div>
+                        <div className="container clearfix">
+                                <div className="Left-nav">
+                                    <ul>
+                                        <li>
+                                            <Link to={"/home"} className="active-nav-element">Main Page</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/catalog"}>Catalog</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/contact"}>Contact</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/giftwrapping"}>Gift Wrapping</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/catalog"} className="dropdown-toggle">Catalog</Link>
+                                        </li>
+                                    </ul>
+                                </div>
                             <div className="Right-nav">
                                 <div className="container">
                                     <div className="Language">
@@ -64,7 +86,7 @@ class Header extends Component {
                                             </ul>
                                         </div>
                                     <div className="Search">
-                                            <img src={require('../assets/img/search.png')} alt=""/>
+                                            <img id="NavSearchBtn" onClick={ShowSearchOverlay} src={require('../assets/img/search.png')} alt=""/>
                                         </div>
                                     <div className="User">
                                             <img src={require('../assets/img/user.png')} alt=""/>
@@ -88,4 +110,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);

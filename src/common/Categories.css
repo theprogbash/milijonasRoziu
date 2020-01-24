@@ -1,0 +1,25 @@
+.Categories-right{
+    padding-left: 30px;
+    padding-top: 145px;
+}
+.Category-list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.Categories-title{
+    border-top: 1px solid rgba(204,204,204,0.4);
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+.Category-list li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(204,204,204,0.4); 
+}
+.Category-list a{
+    font-size: 14px;
+    color: #333;
+}
+.Category-list a:hover{
+    text-decoration: none;
+}

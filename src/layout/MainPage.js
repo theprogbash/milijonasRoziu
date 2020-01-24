@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './MainPage.css';
+import '../common/ProductCard';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import ProductCard from '../common/ProductCard';
+import PageName from '../common/PageName';
 
 class MainPage extends Component{
     render(){
@@ -21,7 +24,7 @@ class MainPage extends Component{
                 <div className="Products">
                     <div className="container">
                         <header className="Products-header">
-                            <h1>Flowers and Gifts</h1>
+                            <PageName currentPage="Flowers and Gifts" />
                         </header>
                         <nav className="Products-nav">
                             <div className="Left-nav">
@@ -35,173 +38,29 @@ class MainPage extends Component{
                         </nav>
                         <div className="Products-content-slider">
                             <div className="row">
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower1.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Cherry Lady</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">250.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower2.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Constellation</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">400.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')}/>   
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower3.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">August Birth</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">50.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"August Birth"} ProductPrice={"40.00"} ProductImgSrc={require('../assets/img/flower3.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower4.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Youth</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">350.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower1.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Cherry Lady</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">250.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')}/>   
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower1.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Cherry Lady</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">250.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"August Birth"} ProductPrice={"40.00"} ProductImgSrc={require('../assets/img/flower3.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower1.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Cherry Lady</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">250.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower1.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Cherry Lady</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">250.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                    <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')}/>   
                                 </div>
                             </div>
                         </div>
@@ -245,47 +104,11 @@ class MainPage extends Component{
                                 </nav>
                                 <div className="row">
                                     <div className="col-lg-6 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower5.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Giselle</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">408.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
+                                        <ProductCard ProductImgSrc={require("../assets/img/flower5.jpg")} ProductName={"Giselle"} ProductPrice={"408.00"}/>
                                     </div>
-                                </div>
                                     <div className="col-lg-6 col-md-6 col-sm12">
-                                    <div className="Product-card">
-                                        <div className="Product-img-container">
-                                            <div className="New-badge">New</div>
-                                            <img src={require("../assets/img/flower1.jpg")} alt="Cherry Lady"/>
-                                            <div className="Product-card-overlay">
-                                                <button className="Like-btn"><img src={require("../assets/img/heart.png")} alt="Love It"/></button>
-                                                <button className="Add-btn"><img src={require("../assets/img/bucket-black.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
-                                        <div className="Product-details">
-                                            <div className="Product-name-container">
-                                                <h5 className="text-center">Royal Composition</h5>
-                                            </div>
-                                            <div className="Product-buy-ops">
-                                                <span className="Product-price">750.00 AZN</span>
-                                                <button><img src={require("../assets/img/bag.png")} alt="Add to basket"/></button>
-                                            </div>
-                                        </div>
+                                        <ProductCard ProductImgSrc={require("../assets/img/flower6.jpg")} ProductName={"Royal Composition"} ProductPrice={"750.00"}/>   
                                     </div>
-                                </div>
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-12 col-sm-12">
