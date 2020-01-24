@@ -38,28 +38,28 @@ class MainPage extends Component{
                         </nav>
                         <div className="Products-content-slider">
                             <div className="row">
-                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                <div className="col-lg-3 col-md-6 col-6">
                                     <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                <div className="col-lg-3 col-md-6 col-6">
                                     <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')}/>   
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
-                                    <ProductCard ProductName={"August Birth"} ProductPrice={"40.00"} ProductImgSrc={require('../assets/img/flower3.jpg')}/>
+                                <div className="col-lg-3 col-md-6 col-6">
+                                    <ProductCard ProductName={"August Birth"} ProductPrice={"260.00"} ProductImgSrc={require('../assets/img/flower3.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                <div className="col-lg-3 col-md-6 col-6">
                                     <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                <div className="col-lg-3 col-md-6 col-6">
                                     <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')}/>   
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
-                                    <ProductCard ProductName={"August Birth"} ProductPrice={"40.00"} ProductImgSrc={require('../assets/img/flower3.jpg')}/>
+                                <div className="col-lg-3 col-md-6 col-6">
+                                    <ProductCard ProductName={"August Birth"} ProductPrice={"410.00"} ProductImgSrc={require('../assets/img/flower3.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                <div className="col-lg-3 col-md-6 col-6">
                                     <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-sm-12">
+                                <div className="col-lg-3 col-md-6 col-6">
                                     <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')}/>   
                                 </div>
                             </div>
@@ -103,11 +103,11 @@ class MainPage extends Component{
                                     </div>
                                 </nav>
                                 <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-sm12">
+                                    <div className="col-lg-6 col-md-6 col-6">
                                         <ProductCard ProductImgSrc={require("../assets/img/flower5.jpg")} ProductName={"Giselle"} ProductPrice={"408.00"}/>
                                     </div>
-                                    <div className="col-lg-6 col-md-6 col-sm12">
-                                        <ProductCard ProductImgSrc={require("../assets/img/flower6.jpg")} ProductName={"Royal Composition"} ProductPrice={"750.00"}/>   
+                                    <div className="col-lg-6 col-md-6 col-6">
+                                        <ProductCard ProductImgSrc={require("../assets/img/flower6.jpg")} ProductName={"Royal"} ProductPrice={"750.00"}/>   
                                     </div>
                                 </div>
                             </div>

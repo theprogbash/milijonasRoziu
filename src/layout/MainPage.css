@@ -155,3 +155,50 @@
     bottom: 0;
     padding-right: 40px;
 }
+
+
+@media screen and (max-width: 990px){
+    .Slider-box{
+        margin: auto;
+    }
+    .Products-bottom div{
+        width: 100%;
+    }
+    .Products-bottom div:first-child section{
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+    .Products-bottom div:nth-child(4) section{
+        padding-bottom: 20px;
+        padding-top: 25px;
+    }
+    .Product-bottom-img1, .Product-bottom-img2{
+        margin-top: 20px;
+    }      
+    .Subscribe-box{
+        width: 90%;
+        padding: 20px 20px;
+    }
+    .Subscribe-box h5{
+        text-align: center;
+        font-size: 18px;
+    }
+    .Subscribe-box-inputs{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Subscribe-box-inputs input{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .Email-sub-button{
+        margin: 0;
+        width: 80px !important;
+    }
+    .Deliver-img-container{
+        display: none;
+    }
+}

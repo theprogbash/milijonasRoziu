@@ -12,7 +12,7 @@ class Footer extends Component{
             <div className="Footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3 col-md-12 col-sm-12">
+                        <div className="col-lg-3 col-md-6 col-6">
                             <ul className="Left-side-footer">
                                 <li><img src={require('../assets/img/logo-white.png')} alt="Logo"/></li>
                                 <li><a href="tel:+994(12)538 57 84">+994(12)538 57 84</a></li>
@@ -23,7 +23,7 @@ class Footer extends Component{
                                 <li className="Language-dropdown-footer"><p>English</p></li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-12 col-sm-12">
+                        <div className="col-lg-3 col-md-6 col-6">
                             <h5>Sections</h5>
                             <ul>
                                 <li><a href="#">Main page</a></li>
@@ -34,10 +34,10 @@ class Footer extends Component{
                                 <li><a href="#">Terms and conditions</a></li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-12 col-sm-12">
+                        <div className="col-lg-3 col-md-6 col-6">
                             <h5>Categories</h5>
                         </div>
-                        <div className="col-lg-3 col-md-12 col-sm-12">
+                        <div className="col-lg-3 col-md-6 col-6">
                             <div className="Footer-search-container">
                                 <h5>Search</h5>
                                 <div className="Search-container" placeholder="Search...">

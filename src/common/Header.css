@@ -135,3 +135,10 @@
     color: black;
     transition: .3s ease;
 }
+
+
+@media screen and (max-width: 990px){
+    .Header-top, .Header-bottom{
+        display: none;
+    }      
+}
