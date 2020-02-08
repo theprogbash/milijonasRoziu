@@ -18,7 +18,7 @@ function App() {
         <SearchOverlay />
         <Header />
         <Switch>
-          <Route path="/home" component={MainPage} />
+          <Route exact path="/" component={MainPage} />
           <Route path="/catalog" component={Catalog} />
           <Route path="/giftwrapping" component={GiftWrapping} />
           <Route path="/contact" component={Contact} />

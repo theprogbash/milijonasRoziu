@@ -60,7 +60,7 @@ class Header extends Component {
                                 <div className="Left-nav">
                                     <ul>
                                         <li>
-                                            <Link to={"/home"} className="active-nav-element">Main Page</Link>
+                                            <Link to={"/"} className="active-nav-element">Main Page</Link>
                                         </li>
                                         <li>
                                             <Link to={"/catalog"}>Catalog</Link>
