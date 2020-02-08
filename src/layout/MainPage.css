@@ -160,6 +160,11 @@
 @media screen and (max-width: 990px){
     .Slider-box{
         margin: auto;
+        width: auto;
+        height: auto;
+    }
+    .Slider-box button{
+        width: 180px;
     }
     .Products-bottom div{
         width: 100%;
@@ -178,6 +183,7 @@
     .Subscribe-box{
         width: 90%;
         padding: 20px 20px;
+        margin: 60px auto;
     }
     .Subscribe-box h5{
         text-align: center;

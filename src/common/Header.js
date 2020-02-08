@@ -18,7 +18,7 @@ class Header extends Component {
         return (
             <div className="Header">
                 <SearchOverlay/>
-                <header>
+                <header className="Pc-nav">
                     <div className="container">
                         <div className="Header-top">
                             <div className="row">
@@ -104,7 +104,12 @@ class Header extends Component {
                         </div>
                     </nav>
                 </header>
-                <header className="Mobile-nav"></header>
+                <header className="Tab-nav">
+
+                </header>
+                <header className="Mobile-nav">
+
+                </header>
             </div>
         );
     }

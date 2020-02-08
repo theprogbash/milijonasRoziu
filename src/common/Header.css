@@ -18,57 +18,58 @@
 .custom-container{
     padding: 0px 50px;
 }
-.Header-top{
+/* #region PC Nav */
+.Pc-nav .Header-top{
     padding-top: 14px;
 }
-.Media{
+.Pc-nav .Media{
     display: flex;
     padding: 20px 0px 10px 0px;
 }
-.Media-text{
+.Pc-nav .Media-text{
     display: flex;
     margin-left: 20px;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.Media-text h6{
+.Pc-nav .Media-text h6{
     margin: 0;
     padding: 0;
 }
-.Media-text p{
+.Pc-nav .Media-text p{
     color: var(--main-gray);
     font-size: 12px;
     font-weight: bold;
 }
-.Header-bottom{
+.Pc-nav .Header-bottom{
     background-color: var(--main-color);
 }
-.Header-bottom ul{
+.Pc-nav .Header-bottom ul{
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
 }
-.Left-nav{
+.Pc-nav .Left-nav{
     display: inline-block;
 }
-.Header-bottom .Left-nav li{
+.Pc-nav .Header-bottom .Left-nav li{
     position: relative;
 }
-.Header-bottom .Left-nav  ul li a{
+.Pc-nav .Header-bottom .Left-nav  ul li a{
     display: block;
     padding: 14px 20px;
     color: white;
     font-weight: bold;
     font-size: 14px;
 }
-.Header-bottom .Left-nav  ul li a:hover{
+.Pc-nav .Header-bottom .Left-nav  ul li a:hover{
     text-decoration: none;
     background-color: white;
     color: var(--main-color);
     transition: .3s ease;
 }
-.Header-bottom .Left-nav ul a:hover:before{
+.Pc-nav .Header-bottom .Left-nav ul a:hover:before{
     content: " ";
     height: 2px;
     width: 100%;
@@ -77,27 +78,27 @@
     left: 0;
     background-color: var(--main-color);
 }
-.Right-nav{
+.Pc-nav .Right-nav{
     float: right;
     position: relative;
 }
-.Right-nav img:hover{
+.Pc-nav .Right-nav img:hover{
     cursor: pointer;
 }
-.Right-nav .container{
+.Pc-nav .Right-nav .container{
     display: flex;
 }
-.Right-nav .container div{
+.Pc-nav .Right-nav .container div{
     padding: 12px 10px;
 }
-.Right-nav a{
+.Pc-nav .Right-nav a{
     color: white;
 }
-.Language a:hover, .User a:hover{
+.Pc-nav .Language a:hover, .Pc-nav .User a:hover{
     text-decoration: none;
     color: white;
 }
-.Dropdown-language{
+.Pc-nav .Dropdown-language{
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -107,7 +108,7 @@
     top: 100%;
     left: 10px;
 }
-.Dropdown-user{
+.Pc-nav .Dropdown-user{
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -117,25 +118,31 @@
     top: 100%;
     left: 70px;
 }
-.Dropdown-language li a, .Dropdown-user li a{
+.Pc-nav .Dropdown-language li a, .Pc-nav .Dropdown-user li a{
     display: block;
     padding: 5px 16px;
 }
-.Dropdown-language li a:hover, .Dropdown-user li a:hover{
+.Pc-nav .Dropdown-language li a:hover, .Pc-nav .Dropdown-user li a:hover{
     background-color: white;
     color: black;
     transition: .3s ease;
 }
-.Language:hover .Dropdown-language, .User:hover .Dropdown-user{
+.Pc-nav .Language:hover .Dropdown-language, .Pc-nav .User:hover .Dropdown-user{
     visibility: visible;
     transition: .3s ease;
     z-index: 10;
 }
-.Language:hover .Current-lang{
+.Pc-nav .Language:hover .Current-lang{
     color: black;
     transition: .3s ease;
 }
+/* #endregion */
 
+/* #region Tab Nav */
+
+
+
+/* #endregion */
 
 @media screen and (max-width: 990px){
     .Header-top, .Header-bottom{
