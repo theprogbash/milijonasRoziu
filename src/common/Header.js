@@ -14,7 +14,6 @@ class Header extends Component {
             let SearchOverlay = document.getElementsByClassName("Search-overlay")[0];
             SearchOverlay.style.display = "flex";
         }
-
         return (
             <div className="Header">
                 <SearchOverlay/>
@@ -71,8 +70,17 @@ class Header extends Component {
                                         <li>
                                             <Link to={"/giftwrapping"}>Gift Wrapping</Link>
                                         </li>
-                                        <li>
-                                            <Link to={"/catalog"} className="dropdown-toggle">Catalog</Link>
+                                        <li className="Dropdown-toggle">
+                                            <Link to={"/catalog"} className="Catalog-btn">Catalog</Link>
+                                            <div className="Catalog-content">
+                                                <ul>
+                                                    <li><a href="">Gifts</a></li>
+                                                    <li><a href="">Newborns</a></li>
+                                                    <li><a href="">Bouquets</a></li>
+                                                    <li><a href="">Birth Boxes</a></li>
+                                                    <li><a href="">Macaroon</a></li>
+                                                </ul>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -104,6 +112,7 @@ class Header extends Component {
                         </div>
                     </nav>
                 </header>
+                
                 <header className="Tab-nav">
 
                 </header>
