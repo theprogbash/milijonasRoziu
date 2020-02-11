@@ -3,7 +3,7 @@ import SearchOverlay from '../common/SearchOverlay';
 import './Header.css';
 import logo from '../assets/img/logo.png';
 import {
-    Link, 
+    NavLink, 
     withRouter
 } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +16,7 @@ class Header extends Component {
             let SearchOverlay = document.getElementsByClassName("Search-overlay")[0];
             SearchOverlay.style.display = "flex";
         }
+        
         return (
             <div className="Header">
                 <SearchOverlay/>
@@ -61,21 +62,21 @@ class Header extends Component {
                                 <div className="Left-nav">
                                     <ul>
                                         <li>
-                                            <Link to={"/"} className="active-nav-element">Main Page</Link>
+                                            <NavLink to={"/home"} activeClassName="active-nav-element" className="Nav-element">Main Page</NavLink>
                                         </li>
                                         <li>
-                                            <Link to={"/catalog"}>Catalog</Link>
+                                            <NavLink to={"/catalog"} activeClassName="active-nav-element" className="Nav-element">Catalog</NavLink>
                                         </li>
                                         <li>
-                                            <Link to={"/contact"}>Contact</Link>
+                                            <NavLink to={"/contact"} activeClassName="active-nav-element" className="Nav-element">Contact</NavLink>
                                         </li>
                                         <li>
-                                            <Link to={"/giftwrapping"}>Gift Wrapping</Link>
+                                            <NavLink to={"/giftwrapping"} activeClassName="active-nav-element" className="Nav-element">Gift Wrapping</NavLink>
                                         </li>
                                         <li className="Dropdown-toggle">
-                                            <Link to={"/catalog"} className="Catalog-btn">Catalog 
+                                            <NavLink to={"/catalog"} activeClassName="active-nav-element" className="Catalog-btn Nav-element">Catalog 
                                                 <FontAwesomeIcon icon={faChevronDown}/>
-                                            </Link>
+                                            </NavLink>
                                             <div className="Catalog-content">
                                                 <ul>
                                                     <li><a href="">Gifts</a></li>

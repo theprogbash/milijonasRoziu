@@ -110,6 +110,8 @@
     width: 220px;
     position: absolute;
     display: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    z-index: 10;
 }
 .Pc-nav .Catalog-content ul{
     display: flex;

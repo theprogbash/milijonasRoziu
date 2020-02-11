@@ -9,7 +9,6 @@ import MainPage from './layout/MainPage';
 import GiftWrapping from './layout/GiftWrapping';
 import Contact from './layout/Contact';
 import Catalog from './layout/Catalog';
-import SearchOverlay from './common/SearchOverlay';
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={MainPage} />
+          <Route exact path="/home" component={MainPage} />
           <Route path="/catalog" component={Catalog} />
           <Route path="/giftwrapping" component={GiftWrapping} />
           <Route path="/contact" component={Contact} />
