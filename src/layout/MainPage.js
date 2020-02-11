@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Radium, { StyleRoot } from 'radium';
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
 import './MainPage.css';
 import '../common/ProductCard';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,35 +8,19 @@ import { faChevronLeft, faChevronRight, faPaperPlane } from "@fortawesome/free-s
 import ProductCard from '../common/ProductCard';
 import PageName from '../common/PageName';
 
-import { slideInLeft, slideInRight, flipInX } from 'react-animations';
-const styles = {
-    slideInLeft: {
-        animation: 'x 1s',
-        animationName: Radium.keyframes(slideInLeft, 'slideInLeft')
-    },
-    slideInRight: {
-        animation: 'x 1s',
-        animationName: Radium.keyframes(slideInRight, 'slideInRight')
-    },
-    flipInX: {
-        animation: 'x 1s',
-        animationName: Radium.keyframes(flipInX, 'flipInX')
-    }
-}
-
 class MainPage extends Component {
     render() {
         return (
-            <StyleRoot className="Main-page">
+            <div className="Main-page">
                 <header className="Main-page-header">
                     <div className="container">
-                        <div className="Slider-box" style={styles.slideInLeft}>
+                        <ScrollAnimation className="Slider-box" animateIn="slideInLeft">
                             <div className="Slider-box-content">
                                 <h4>Flowers</h4>
                                 <h4>Choose from the most beatiful flowers</h4>
                                 <button>Go to the catalogue</button>
                             </div>
-                        </div>
+                        </ScrollAnimation>
                     </div>
                 </header>
                 <div className="Products">
@@ -55,7 +40,7 @@ class MainPage extends Component {
                         </nav>
                         <div className="Products-content-slider">
                             <div className="row">
-                                <div className="col-lg-6 col-md-12 col-12" style={styles.slideInLeft}>
+                                <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInLeft">
                                     <div className="row">
                                         <div className="col-lg-6 col-md-6 col-6">
                                             <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')} />
@@ -63,15 +48,9 @@ class MainPage extends Component {
                                         <div className="col-lg-6 col-md-6 col-6">
                                             <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')} />
                                         </div>
-                                        <div className="col-lg-6 col-md-6 col-6">
-                                            <ProductCard ProductName={"August Birth"} ProductPrice={"260.00"} ProductImgSrc={require('../assets/img/flower3.jpg')} />
-                                        </div>
-                                        <div className="col-lg-6 col-md-6 col-6">
-                                            <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')} />
-                                        </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12 col-12" style={styles.slideInRight}>
+                                </ScrollAnimation>
+                                <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInRight">
                                     <div className="row">
                                         <div className="col-lg-6 col-md-6 col-6">
                                             <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')} />
@@ -79,6 +58,20 @@ class MainPage extends Component {
                                         <div className="col-lg-6 col-md-6 col-6">
                                             <ProductCard ProductName={"August Birth"} ProductPrice={"410.00"} ProductImgSrc={require('../assets/img/flower3.jpg')} />
                                         </div>
+                                    </div>
+                                </ScrollAnimation>
+                                <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInLeft">
+                                    <div className="row">
+                                        <div className="col-lg-6 col-md-6 col-6">
+                                            <ProductCard ProductName={"August Birth"} ProductPrice={"260.00"} ProductImgSrc={require('../assets/img/flower3.jpg')} />
+                                        </div>
+                                        <div className="col-lg-6 col-md-6 col-6">
+                                            <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')} />
+                                        </div>
+                                    </div>
+                                </ScrollAnimation>
+                                <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInRight">
+                                    <div className="row">
                                         <div className="col-lg-6 col-md-6 col-6">
                                             <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')} />
                                         </div>
@@ -86,7 +79,7 @@ class MainPage extends Component {
                                             <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')} />
                                         </div>
                                     </div>
-                                </div>
+                                </ScrollAnimation>
                             </div>
                         </div>
                         <div className="Products-bottom">
@@ -97,12 +90,12 @@ class MainPage extends Component {
                                     <button className="Read-more">Read More</button>
                                 </section>
                             </div>
-                            <div>
-                                <div className="Product-bottom-img1" style={styles.flipInX}></div>
-                            </div>
-                            <div>
-                                <div className="Product-bottom-img2" style={styles.flipInX}></div>
-                            </div>
+                            <ScrollAnimation animateIn="flipInX">
+                                <div className="Product-bottom-img1"></div>
+                            </ScrollAnimation>
+                            <ScrollAnimation animateIn="flipInX">
+                                <div className="Product-bottom-img2"></div>
+                            </ScrollAnimation>
                             <div>
                                 <section>
                                     <h5>Gifts</h5>
@@ -127,25 +120,25 @@ class MainPage extends Component {
                                         <span><FontAwesomeIcon icon={faChevronRight} /></span>
                                     </div>
                                 </nav>
-                                <div className="row" style={styles.slideInLeft}>
+                                <ScrollAnimation className="row" animateIn="slideInLeft">
                                     <div className="col-lg-6 col-md-6 col-6">
                                         <ProductCard ProductImgSrc={require("../assets/img/flower5.jpg")} ProductName={"Giselle"} ProductPrice={"408.00"} />
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-6">
                                         <ProductCard ProductImgSrc={require("../assets/img/flower6.jpg")} ProductName={"Royal"} ProductPrice={"750.00"} />
                                     </div>
-                                </div>
+                                </ScrollAnimation>
                             </div>
-                            <div className="col-lg-6 col-md-12 col-sm-12">
-                                <div className="Best-seller" style={styles.slideInRight}></div>
-                            </div>
+                            <ScrollAnimation className="col-lg-6 col-md-12 col-sm-12" animateIn="slideInRight">
+                                <div className="Best-seller"></div>
+                            </ScrollAnimation>
                         </div>
                     </div>
                 </div>
                 <div className="Follow-section">
                     <div className="Follow-section-header text-center">
-                        <p>Follow us on Instagram</p>
-                        <p>@milijonasroziu</p>
+                        <ScrollAnimation animateIn="fadeIn"><p>Follow us on Instagram</p></ScrollAnimation>
+                        <ScrollAnimation animateIn="fadeIn"><p>@milijonasroziu</p></ScrollAnimation>
                     </div>
                     <div className="Follow-section-cover">
                         <img src={require("../assets/img/cover.png")} alt="Image not found :/" />
@@ -169,7 +162,7 @@ class MainPage extends Component {
                         </div>
                     </div>
                 </div>
-            </StyleRoot>
+            </div>
         );
     }
 }

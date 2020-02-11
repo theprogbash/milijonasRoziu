@@ -120,14 +120,6 @@
     padding: 5px 0;
     margin: 0;
     font-weight: bold;
-    animation-name: TextOpacity;
-    animation-iteration-count: 1;
-    animation-duration: 2s;
-    transition: linear;
-}
-@keyframes TextOpacity{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
 }
 .Follow-section-cover img{
     width: 100%;
