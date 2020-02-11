@@ -130,7 +130,7 @@ class MainPage extends Component {
                                 </ScrollAnimation>
                             </div>
                             <ScrollAnimation className="col-lg-6 col-md-12 col-sm-12" animateIn="slideInRight">
-                                <div className="Best-seller"></div>
+                                <div className="Best-seller ml-5"></div>
                             </ScrollAnimation>
                         </div>
                     </div>
