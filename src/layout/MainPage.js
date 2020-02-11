@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import './MainPage.css';
 import '../common/ProductCard';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,11 +17,25 @@ class MainPage extends Component {
                 <header className="Main-page-header">
                     <div className="container">
                         <ScrollAnimation className="Slider-box" animateIn="slideInLeft">
-                            <div className="Slider-box-content">
+                            {/* <div className="Slider-box-content">
                                 <h4>Flowers</h4>
                                 <h4>Choose from the most beatiful flowers</h4>
                                 <button>Go to the catalogue</button>
-                            </div>
+                            </div> */}
+                            <CarouselProvider totalSlides={3} className="Slider-box-content">
+                                <Slider>
+                                    <Slide index={0}>
+                                        <h4>Flowers</h4>
+                                        <h4>Choose from the most beatiful flowers</h4>
+                                        <button>Go to the catalogue</button>
+                                    </Slide>
+                                    <Slide index={1}>
+                                        <h4>Gifts</h4>
+                                        <h4>Choose from the most beatiful gifts</h4>
+                                        <button>Go to the catalogue</button>
+                                    </Slide>
+                                </Slider>
+                            </CarouselProvider>
                         </ScrollAnimation>
                     </div>
                 </header>
