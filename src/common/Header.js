@@ -6,6 +6,8 @@ import {
     Link, 
     withRouter
 } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 class Header extends Component {
     render() {
@@ -71,7 +73,9 @@ class Header extends Component {
                                             <Link to={"/giftwrapping"}>Gift Wrapping</Link>
                                         </li>
                                         <li className="Dropdown-toggle">
-                                            <Link to={"/catalog"} className="Catalog-btn">Catalog</Link>
+                                            <Link to={"/catalog"} className="Catalog-btn">Catalog 
+                                                <FontAwesomeIcon icon={faChevronDown}/>
+                                            </Link>
                                             <div className="Catalog-content">
                                                 <ul>
                                                     <li><a href="">Gifts</a></li>

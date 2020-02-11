@@ -89,6 +89,11 @@
     color: var(--main-color) !important;
     transition: .3s ease;
 }
+.Catalog-btn svg{
+    margin-left: 5px;
+    width: 10px !important;
+    vertical-align: middle;
+}
 .Pc-nav .Dropdown-toggle:hover:before{
     content: " ";
     height: 2px;
