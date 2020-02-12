@@ -8,18 +8,39 @@ import { faChevronLeft, faChevronRight, faPaperPlane } from "@fortawesome/free-s
 import ProductCard from '../common/ProductCard';
 import PageName from '../common/PageName';
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 class MainPage extends Component {
     render() {
+        var settings = {
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000
+          };
+
         return (
             <div className="Main-page">
                 <header className="Main-page-header">
                     <div className="container">
                         <ScrollAnimation className="Slider-box" animateIn="slideInLeft">
-                            <div className="Slider-box-content">
-                                <h4>Flowers</h4>
-                                <h4>Choose from the most beatiful flowers</h4>
-                                <button>Go to the catalogue</button>
-                            </div>
+                            <Slider {...settings}>
+                                <div className="Slider-box-content">
+                                    <h4>Flowers</h4>
+                                    <h4>Choose from the most beatiful flowers</h4>
+                                    <button>Go to the catalogue</button>
+                                </div>
+                                <div className="Slider-box-content">
+                                    <h4>Gifts</h4>
+                                    <h4>Choose from the most beatiful gifts</h4>
+                                    <button>Go to the catalogue</button>
+                                </div>
+                            </Slider>
                         </ScrollAnimation>
                     </div>
                 </header>
