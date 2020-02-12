@@ -192,13 +192,412 @@
 /* #endregion */
 
 /* #region Tab Nav */
-
+.slick-prev:before,
+.slick-next:before {
+  color: var(--main-color) !important;
+  background: none;
+}
+.Tab-nav{
+    display: none;
+}
+.Tab-nav .Header-top{
+    padding: 14px 0;
+}
+.Tab-nav .Media{
+    display: flex;
+}
+.Tab-nav .Media-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Tab-nav .Media-text h6{
+    margin: 0;
+    padding: 0;
+}
+.Tab-nav .Media-text p{
+    color: var(--main-gray);
+    font-size: 12px;
+    font-weight: bold;
+}
+.Tab-nav .Header-bottom{
+    background-color: var(--main-color);
+}
+.Tab-nav .Header-bottom ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.Tab-nav .Left-nav{
+    display: inline-block;
+}
+.Tab-nav .Header-bottom .Left-nav li{
+    position: relative;
+}
+.Tab-nav .Header-bottom .Left-nav  ul li a{
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.Tab-nav .Header-bottom .Left-nav  ul li a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: var(--main-color);
+    transition: .3s ease;
+}
+.Tab-nav .Header-bottom .Left-nav ul a:hover:before{
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-color: var(--main-color);
+}
+.Tab-nav .Dropdown-toggle:hover{
+    background-color: white;
+}
+.Tab-nav .Dropdown-toggle:hover{
+    background-color: white;
+    transition: .3s ease;
+}
+.Tab-nav .Dropdown-toggle:hover .Catalog-btn{
+    color: var(--main-color) !important;
+    transition: .3s ease;
+}
+.Catalog-btn svg{
+    margin-left: 5px;
+    width: 10px !important;
+    vertical-align: middle;
+}
+.Tab-nav .Dropdown-toggle:hover:before{
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-color: var(--main-color);
+}
+.Tab-nav .Dropdown-toggle:hover .Catalog-content{
+    display: block;
+}
+.Tab-nav .Catalog-content{
+    width: 220px;
+    position: absolute;
+    display: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    z-index: 10;
+}
+.Tab-nav .Catalog-content ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.Tab-nav .Catalog-content ul a{
+    color: var(--main-gray) !important;
+    padding: 5px 20px !important;
+}
+.Tab-nav .Catalog-content ul a:hover{
+    background-color: #f5f5f5 !important;
+    border: none !important;
+}
+.Tab-nav .Catalog-content ul a:hover:before{
+    background-color: transparent !important;
+}
+.Tab-nav .Right-nav{
+    float: right;
+    position: relative;
+}
+.Tab-nav .Right-nav img:hover{
+    cursor: pointer;
+}
+.Tab-nav .Right-nav .container{
+    display: flex;
+}
+.Tab-nav .Right-nav .container div{
+    padding: 12px 10px;
+}
+.Tab-nav .Right-nav a{
+    color: white;
+}
+.Tab-nav .Language a:hover, .Tab-nav .User a:hover{
+    text-decoration: none;
+    color: white;
+}
+.Tab-nav .Dropdown-language{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+}
+.Tab-nav .Dropdown-user{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 70px;
+}
+.Tab-nav .Dropdown-language li a, .Tab-nav .Dropdown-user li a{
+    display: block;
+    padding: 5px 16px;
+}
+.Tab-nav .Dropdown-language li a:hover, .Tab-nav .Dropdown-user li a:hover{
+    background-color: white;
+    color: black;
+    transition: .3s ease;
+}
+.Tab-nav .Language:hover .Dropdown-language, .Tab-nav .User:hover .Dropdown-user{
+    visibility: visible;
+    transition: .3s ease;
+    z-index: 10;
+}
+.Tab-nav .Language:hover .Current-lang{
+    color: black;
+    transition: .3s ease;
+}
 
 
 /* #endregion */
 
+/* #region Mobile Nav */
+.Mobile-nav{
+    display: none;
+}
+.Sub-menu{
+    display: none;
+}
+.Sub-menu ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    padding: 10px 10px !important;
+    z-index: 10;
+}
+.Sub-menu ul li a{
+    padding: 14px 16px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+.Mobile-nav .Header-top .col-5 h6{
+    font-size: .8em;
+}
+.Mobile-nav .Header-top .col-5 p{
+    font-size: .6em;
+}
+.Mobile-nav .Media{
+    display: flex;
+}
+.Mobile-nav .Media-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Mobile-nav .Media-text h6{
+    margin: 0;
+    padding: 0;
+}
+.Mobile-nav .Media-text p{
+    color: var(--main-gray);
+    font-size: 12px;
+    font-weight: bold;
+}
+.Mobile-nav .Header-bottom{
+    background-color: var(--main-color);
+}
+.Mobile-nav .Header-bottom ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.Mobile-nav .Left-nav{
+    display: inline-block;
+}
+.Mobile-nav .Header-bottom .Left-nav li{
+    position: relative;
+}
+.Mobile-nav .Header-bottom .Left-nav  ul li a{
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.Mobile-nav .Header-bottom .Left-nav  ul li a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: var(--main-color);
+    transition: .3s ease;
+}
+.Mobile-nav .Header-bottom .Left-nav ul a:hover:before{
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-color: var(--main-color);
+}
+.Mobile-nav .Dropdown-toggle:hover{
+    background-color: white;
+}
+.Mobile-nav .Dropdown-toggle:hover{
+    background-color: white;
+    transition: .3s ease;
+}
+.Mobile-nav .Dropdown-toggle:hover .Catalog-btn{
+    color: var(--main-color) !important;
+    transition: .3s ease;
+}
+.Catalog-btn svg{
+    margin-left: 5px;
+    width: 10px !important;
+    vertical-align: middle;
+}
+.Mobile-nav .Dropdown-toggle:hover:before{
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background-color: var(--main-color);
+}
+.Mobile-nav .Dropdown-toggle:hover .Catalog-content{
+    display: block;
+}
+.Mobile-nav .Catalog-content{
+    width: 220px;
+    position: absolute;
+    display: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    z-index: 10;
+}
+.Mobile-nav .Catalog-content ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.Mobile-nav .Catalog-content ul a{
+    color: var(--main-gray) !important;
+    padding: 5px 20px !important;
+}
+.Mobile-nav .Catalog-content ul a:hover{
+    background-color: #f5f5f5 !important;
+    border: none !important;
+}
+.Mobile-nav .Catalog-content ul a:hover:before{
+    background-color: transparent !important;
+}
+.Mobile-nav .Right-nav{
+    float: right;
+    position: static;
+}
+.Mobile-nav .Right-nav img:hover{
+    cursor: pointer;
+}
+.Mobile-nav .Right-nav .container{
+    display: flex;
+}
+.Mobile-nav .Right-nav .container div{
+    padding: 12px 10px;
+}
+.Mobile-nav .Right-nav a{
+    color: white;
+}
+.Mobile-nav .Language a:hover, .Mobile-nav .User a:hover{
+    text-decoration: none;
+    color: white;
+}
+.Mobile-nav .Dropdown-language{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+}
+.Mobile-nav .Dropdown-user{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 70px;
+}
+.Mobile-nav .Dropdown-language li a, .Mobile-nav .Dropdown-user li a{
+    display: block;
+    padding: 5px 16px;
+}
+.Mobile-nav .Dropdown-language li a:hover, .Mobile-nav .Dropdown-user li a:hover{
+    background-color: white;
+    color: black;
+    transition: .3s ease;
+}
+.Mobile-nav .Language:hover .Dropdown-language, .Mobile-nav .User:hover .Dropdown-user{
+    visibility: visible;
+    transition: .3s ease;
+    z-index: 10;
+}
+.Mobile-nav .Language:hover .Current-lang{
+    color: black;
+    transition: .3s ease;
+}
+
+/* #endregion */
+
 @media screen and (max-width: 990px){
-    .Header-top, .Header-bottom{
+    .Pc-nav{
         display: none;
     }      
+    .Tab-nav{
+        display: block;
+    }
+    .Best-seller{
+        margin: 0 !important;
+        background-position: center !important;
+    }
+}
+
+@media screen and (max-width: 590px){
+    .Pc-nav{
+        display: none;
+    }      
+    .Tab-nav{
+        display: none;
+    }
+    .Mobile-nav{
+        display: block;
+    }
+    .Contact-user-credentials input{
+        width: 100% !important;
+    }
+    .Contact-button-container button{
+        width: 30% !important;
+    }
 }

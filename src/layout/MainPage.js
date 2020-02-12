@@ -59,7 +59,7 @@ class MainPage extends Component {
                             </div>
                         </nav>
                         <Slider {...settings}>
-                            <div className="item Products-content-slider">
+                            <div className="Products-content-slider">
                                 <div className="row">
                                     <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInLeft">
                                         <div className="row">
@@ -103,9 +103,9 @@ class MainPage extends Component {
                                     </ScrollAnimation>
                                 </div>
                             </div>
-                            <div className="item Products-content-slider">
+                            <div className="Products-content-slider">
                                 <div className="row">
-                                    <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInRight">
+                                    <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInLeft">
                                         <div className="row">
                                             <div className="col-lg-6 col-md-6 col-6">
                                                 <ProductCard ProductName={"Constellation"} ProductPrice={"400.00"} ProductImgSrc={require('../assets/img/flower2.jpg')} />
@@ -135,7 +135,7 @@ class MainPage extends Component {
                                             </div>
                                         </div>
                                     </ScrollAnimation>
-                                    <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInLeft">
+                                    <ScrollAnimation className="col-lg-6 col-md-12 col-12" animateIn="fadeInRight">
                                         <div className="row">
                                             <div className="col-lg-6 col-md-6 col-6">
                                                 <ProductCard ProductName={"Cherry Lady"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')} />
