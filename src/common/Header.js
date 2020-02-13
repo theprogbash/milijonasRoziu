@@ -11,8 +11,19 @@ import { faChevronDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import $ from 'jquery';
+window.$ = $;
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this._toggleDiv = this._toggleDiv.bind(this);
+    }
+
+    _toggleDiv() {
+        $(this.refs['toggle-div']).toggle("slow");
+    }
+
     render() {
         var settings = {
             infinite: true,
@@ -31,11 +42,15 @@ class Header extends Component {
             SearchOverlay.style.display = "flex";
         }
 
-        function ShowSubMenu() {
+        $(".Sub-menu a").click(function () {
+            $(".Sub-menu").hide("slow");
+        });
+
+        /* function ShowSubMenu() {
             let subMenu = document.getElementsByClassName("Sub-menu")[0];
             subMenu.style.transition = ".3s ease";
             subMenu.classList.toggle("d-block");
-        }
+        } */
 
         return (
             <div className="Header">
@@ -45,7 +60,9 @@ class Header extends Component {
                         <div className="Header-top">
                             <div className="row">
                                 <div className="col-lg-3 col-md-6 col-sm-12 logo-container">
-                                    <img src={logo} alt="Milijonas Roziu" />
+                                    <NavLink to={"/home"}>
+                                        <img style={{ width: "100%" }} src={logo} alt="Milijonas Roziu" />
+                                    </NavLink>
                                 </div>
                                 <div className="col-lg-3 col-md-6 col-sm-12 Media">
                                     <div>
@@ -142,7 +159,9 @@ class Header extends Component {
                     <div className="container">
                         <div className="row Header-top d-flex align-items-center">
                             <div className="col-4">
-                                <img src={logo} alt="Milijonas Roziu" />
+                                <NavLink to={"/home"} >
+                                    <img style={{ width: "100%" }} src={logo} alt="Milijonas Roziu" />
+                                </NavLink>
                             </div>
                             <div className="col-2"></div>
                             <div className="col-6 pt-3">
@@ -243,7 +262,9 @@ class Header extends Component {
                     <div className="container">
                         <div className="row Header-top d-flex align-items-center">
                             <div className="col-5">
-                                <img style={{ width: "100%" }} src={logo} alt="Milijonas Roziu" />
+                                <NavLink to={"/home"}>
+                                    <img style={{ width: "100%" }} src={logo} alt="Milijonas Roziu" />
+                                </NavLink>
                             </div>
                             <div className="col-1"></div>
                             <div className="col-5 pt-3">
@@ -295,37 +316,23 @@ class Header extends Component {
                                     <div className="Basket">
                                         <img src={require('../assets/img/bag.png')} alt="" />
                                     </div>
-                                    <div onClick={ShowSubMenu} className="Toggle-menu">
+                                    <div onClick={this._toggleDiv} className="Toggle-menu">
                                         <FontAwesomeIcon style={{ color: "white" }} icon={faBars} />
                                     </div>
                                 </div>
-                                <div className="Sub-menu">
+                                <div className="Sub-menu" ref="toggle-div">
                                     <ul>
                                         <li>
                                             <NavLink to={"/home"} activeClassName="active-nav-element" className="Nav-element">Main Page</NavLink>
                                         </li>
-                                        {/* <li>
-                                                <NavLink to={"/catalog"} activeClassName="active-nav-element" className="Nav-element">Catalog</NavLink>
-                                                 </li> */}
                                         <li>
                                             <NavLink to={"/contact"} activeClassName="active-nav-element" className="Nav-element">Contact</NavLink>
                                         </li>
                                         <li>
                                             <NavLink to={"/giftwrapping"} activeClassName="active-nav-element" className="Nav-element">Gift Wrapping</NavLink>
                                         </li>
-                                        <li className="Dropdown-toggle">
-                                            <NavLink to={"/catalog"} activeClassName="active-nav-element" className="Catalog-btn Nav-element">Catalog
-                                                <FontAwesomeIcon icon={faChevronDown} />
-                                            </NavLink>
-                                            <div className="Catalog-content">
-                                                <ul>
-                                                    <li><a href="">Gifts</a></li>
-                                                    <li><a href="">Newborns</a></li>
-                                                    <li><a href="">Bouquets</a></li>
-                                                    <li><a href="">Birth Boxes</a></li>
-                                                    <li><a href="">Macaroon</a></li>
-                                                </ul>
-                                            </div>
+                                        <li>
+                                            <NavLink to={"/catalog"} activeClassName="active-nav-element" className="Nav-element">Catalog</NavLink>
                                         </li>
                                     </ul>
                                 </div>

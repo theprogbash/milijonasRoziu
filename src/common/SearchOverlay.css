@@ -5,7 +5,7 @@
     top: 0;
     bottom: 0;
     background-color: rgba(0,0,0,.7);
-    z-index: 10;
+    z-index: 100;
     display: none;
     justify-content: center;
 }
@@ -52,3 +52,8 @@
     color: #00CCCC;
 }
 
+@media screen and (max-width:990px){
+    .Search-form{
+        width: 80%;
+    }
+}

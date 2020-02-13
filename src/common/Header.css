@@ -378,6 +378,7 @@
 }
 .Sub-menu{
     display: none;
+    height: auto;
 }
 .Sub-menu ul{
     display: flex;
