@@ -61,7 +61,7 @@ class Header extends Component {
                             <div className="row">
                                 <div className="col-lg-3 col-md-6 col-sm-12 logo-container">
                                     <NavLink to={"/home"}>
-                                        <img style={{ width: "100%" }} src={logo} alt="Milijonas Roziu" />
+                                        <img src={logo} alt="Milijonas Roziu" />
                                     </NavLink>
                                 </div>
                                 <div className="col-lg-3 col-md-6 col-sm-12 Media">
@@ -141,9 +141,9 @@ class Header extends Component {
                                     <div className="User">
                                         <img src={require('../assets/img/user.png')} alt="" />
                                         <ul className="Dropdown-user">
-                                            <li><a href="#">Login</a></li>
-                                            <li><a href="#">Register</a></li>
-                                            <li><a href="#">Wishlist</a></li>
+                                            <li><NavLink to={"/login"}>Login</NavLink></li>
+                                            <li><NavLink to={"/login"}>Register</NavLink></li>
+                                            <li><NavLink to={"/wishlist"}>Wishlist</NavLink></li>
                                         </ul>
                                     </div>
                                     <div className="Basket">

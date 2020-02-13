@@ -9,6 +9,7 @@ import MainPage from './layout/MainPage';
 import GiftWrapping from './layout/GiftWrapping';
 import Contact from './layout/Contact';
 import Catalog from './layout/Catalog';
+import LoginReg from './layout/LoginReg';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/home" component={MainPage} />
+          <Route path="/home" component={MainPage} />
           <Route path="/catalog" component={Catalog} />
           <Route path="/giftwrapping" component={GiftWrapping} />
           <Route path="/contact" component={Contact} />
+          <Route path="/login" component={LoginReg} />
         </Switch>
         <Footer />
       </Router>
