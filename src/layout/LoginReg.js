@@ -6,16 +6,14 @@ window.$ = $;
 
 class LoginReg extends Component {
     render() {
-        function MinimizeLabel(){
-            $(this).closest(".Reg-fields").css("border-bottom", "2px solid #f99");
-            $(this).closest("label").css("top", "-15px").css("font-size", ".7em").css("transition", ".3s ease-out");
+        function MinimizeLabel(event){
+            $(event.target).parent().css("border-bottom", "2px solid #f99");
+            $(event.target).parent().find("label").css("font-size", ".7em").css("top", "-15px").css("transition", ".3s ease-out");
         }
-        
         return (
             <div>
                 <div className="container">
                     <Breadcrumb currentPage="Login and register" />
-
                     <div className="Loginreg-container">
                         <div className="row">
                             <div className="Login-section col-lg-6 col-md-12 col-12">
