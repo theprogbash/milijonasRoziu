@@ -10,6 +10,7 @@ import GiftWrapping from './layout/GiftWrapping';
 import Contact from './layout/Contact';
 import Catalog from './layout/Catalog';
 import LoginReg from './layout/LoginReg';
+import Product from './layout/Product';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/giftwrapping" component={GiftWrapping} />
           <Route path="/contact" component={Contact} />
           <Route path="/login" component={LoginReg} />
+          <Route path="/product" component={Product} />
         </Switch>
         <Footer />
       </Router>

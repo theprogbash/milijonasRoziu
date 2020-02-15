@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Breadcrumb from '../common/Breadcrumb';
 import Categories from '../common/Categories';
+import PageName from '../common/PageName';
 import ProductCard from '../common/ProductCard';
 import Pagination from '../common/Pagination';
 import './Catalog.css';
@@ -13,6 +14,7 @@ class Catalog extends Component{
                     <div className="row">
                         <div className="col-lg-9 col-md-12 col-sm-12">
                             <Breadcrumb currentPage="Catalog"/>
+                            <PageName currentPage="Catalog"/>
                             <div className="Clearfix">
                                 <span>Showing 6 of 50 products</span>
                             </div>

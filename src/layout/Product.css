@@ -1,0 +1,66 @@
+.Product-img{
+    width: 100%;
+}
+.Counter{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.Ctrl-btn{
+    width: 25px;
+    line-height: 36px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    background-color: #f99;
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
+.Decrement{
+    border-radius: 5px 0 0 5px;
+}
+.Increment{
+    border-radius: 0 5px 5px 0;
+}
+.Count{
+    position: relative;
+    width: 42px;
+    height: 36px;
+    color: #333C48;
+    text-align: center;
+    overflow: hidden;
+    border-top: 1px solid #f99;
+    border-bottom: 1px solid #f99;
+}
+.Count-num{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 36px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+}
+.Buy-btn{
+    background-color: #f99;
+    border-radius: 30px;
+    padding: 7px 18px;
+    transition: .2s ease all;
+    font-size: 14px;
+    border: none;
+    color: white;
+    outline: none;
+}
