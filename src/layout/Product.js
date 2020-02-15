@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import './Product.css';
 import Breadcrumb from '../common/Breadcrumb';
 
+import {
+    Magnifier,
+    GlassMagnifier,
+    SideBySideMagnifier,
+    PictureInPictureMagnifier,
+    MOUSE_ACTIVATION,
+    TOUCH_ACTIVATION
+  } from "react-image-magnifiers";
+
 class Product extends Component{
     constructor(props) {
         super(props);
@@ -31,8 +40,10 @@ class Product extends Component{
                     <Breadcrumb currentPage="Catalog > Gifts > Accessory" />
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-5">
-                            <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-img"/>
+                            {/* <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-img"/> */}
+                            <GlassMagnifier square={true} magnifierSize={"40%"} imageSrc={require("../assets/img/gift.jpg")} imageAlt="Example"/>
                         </div>
+                        
                         <div className="col-sm-12 col-md-12 col-lg-7 pl-5 pt-3">
                             <h4 className="Product-name">Accessory</h4>
                             <p className="Product-price">3.00 <span>AZN</span></p>
