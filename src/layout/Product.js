@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
 import './Product.css';
 import Breadcrumb from '../common/Breadcrumb';
-
-import {
-    Magnifier,
-    GlassMagnifier,
-    SideBySideMagnifier,
-    PictureInPictureMagnifier,
-    MOUSE_ACTIVATION,
-    TOUCH_ACTIVATION
-  } from "react-image-magnifiers";
+import {GlassMagnifier} from "react-image-magnifiers";
 
 class Product extends Component{
     constructor(props) {
         super(props);
         this.state = {
-          clicks:1,
+          clicks: 1,
             show:true
         };
     }
@@ -32,8 +24,14 @@ class Product extends Component{
             });
         }
     }
-
+    
     render(){
+        function changeImg(e) {
+            let mainImg = document.querySelector("img[alt='Product-main-img']");;
+            let thumbSrc = e.target.getAttribute("src");
+            mainImg.setAttribute("src", thumbSrc);
+        }
+
         return(
             <div className="Product">
                 <div className="container">
@@ -41,7 +39,15 @@ class Product extends Component{
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-5">
                             {/* <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-img"/> */}
-                            <GlassMagnifier square={true} magnifierSize={"40%"} imageSrc={require("../assets/img/gift.jpg")} imageAlt="Example"/>
+                            <GlassMagnifier square={true} magnifierSize={"40%"} imageSrc={require("../assets/img/gift.jpg")} imageAlt="Product-main-img" className="Product-img"/>
+                            <div className="Product-images">
+                                <div className="Product-thumbnail">
+                                    <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-thumbnail-img" onClick={changeImg}/> 
+                                </div>
+                                <div className="Product-thumbnail">
+                                    <img src={require("../assets/img/gift2.jpg")} alt="Gift" className="Product-thumbnail-img" onClick={changeImg}/>
+                                </div>
+                            </div>
                         </div>
                         
                         <div className="col-sm-12 col-md-12 col-lg-7 pl-5 pt-3">
@@ -55,7 +61,7 @@ class Product extends Component{
                                     </div>
                                     <div className="Increment Ctrl-btn" onClick={this.IncrementItem}>+</div>
                                 </div>
-                                <button class="Buy-btn mr-3">Buy</button>
+                                <button className="Buy-btn mr-3">Buy</button>
                                 <span>in stock</span>
                             </div>
                         </div>

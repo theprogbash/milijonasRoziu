@@ -1,6 +1,21 @@
 .Product-img{
     width: 100%;
 }
+.Product-images{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.Product-thumbnail{
+    width: 30%;
+    height: 80px;
+    margin: 10px 10px 10px 0px;
+    cursor: pointer;
+}
+.Product-thumbnail img{
+    width: 100%;  
+}
 .Counter{
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
