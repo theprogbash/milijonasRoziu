@@ -4,6 +4,7 @@
 .Product-images{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -78,4 +79,40 @@
     border: none;
     color: white;
     outline: none;
+}
+.Product-info{
+    margin: 120px 0;
+}
+.Nav-pills{
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.Nav-pills li{
+    position: relative;
+    display: inline-block;
+}
+.Nav-pills li a{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    background: transparent;
+    display: block;
+}
+.Line{
+    display: block;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    width: 80px;
+    background: #0cc;
+}
+.Product-info-content{
+    padding: 10px 0;
+    color: gray;
+}
+#Description span, #About span{
+    font-weight: bold;
 }

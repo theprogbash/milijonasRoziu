@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './Product.css';
 import Breadcrumb from '../common/Breadcrumb';
-import {GlassMagnifier} from "react-image-magnifiers";
+import { GlassMagnifier } from "react-image-magnifiers";
 
-class Product extends Component{
+class Product extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          clicks: 1,
-            show:true
+            clicks: 1,
+            show: true
         };
     }
 
@@ -18,38 +18,50 @@ class Product extends Component{
 
     DecreaseItem = () => {
         this.setState({ clicks: this.state.clicks - 1 });
-        if(this.state.clicks == 1){
+        if (this.state.clicks == 1) {
             this.setState({
-                clicks:1
+                clicks: 1
             });
         }
     }
-    
-    render(){
+
+    render() {
         function changeImg(e) {
             let mainImg = document.querySelector("img[alt='Product-main-img']");;
             let thumbSrc = e.target.getAttribute("src");
             mainImg.setAttribute("src", thumbSrc);
         }
-
-        return(
+        function openAbout(e){
+            var productDesc = document.getElementById("Description");
+            var productAbout = document.getElementById("About");
+            e.preventDefault();
+            productAbout.setAttribute("class", "d-block");
+            productDesc.setAttribute("class", "d-none");
+        }
+        function openDesc(e){
+            var productDesc = document.getElementById("Description");
+            var productAbout = document.getElementById("About");
+            e.preventDefault();
+            productAbout.setAttribute("class", "d-none");
+            productDesc.setAttribute("class", "d-block");
+        }
+        return (
             <div className="Product">
                 <div className="container">
                     <Breadcrumb currentPage="Catalog > Gifts > Accessory" />
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-5">
                             {/* <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-img"/> */}
-                            <GlassMagnifier square={true} magnifierSize={"40%"} imageSrc={require("../assets/img/gift.jpg")} imageAlt="Product-main-img" className="Product-img"/>
+                            <GlassMagnifier square={true} magnifierSize={"40%"} imageSrc={require("../assets/img/gift.jpg")} imageAlt="Product-main-img" className="Product-img" />
                             <div className="Product-images">
                                 <div className="Product-thumbnail">
-                                    <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-thumbnail-img" onClick={changeImg}/> 
+                                    <img src={require("../assets/img/gift.jpg")} alt="Gift" className="Product-thumbnail-img" onClick={changeImg} />
                                 </div>
                                 <div className="Product-thumbnail">
-                                    <img src={require("../assets/img/gift2.jpg")} alt="Gift" className="Product-thumbnail-img" onClick={changeImg}/>
+                                    <img src={require("../assets/img/gift2.jpg")} alt="Gift" className="Product-thumbnail-img" onClick={changeImg} />
                                 </div>
                             </div>
                         </div>
-                        
                         <div className="col-sm-12 col-md-12 col-lg-7 pl-5 pt-3">
                             <h4 className="Product-name">Accessory</h4>
                             <p className="Product-price">3.00 <span>AZN</span></p>
@@ -57,12 +69,31 @@ class Product extends Component{
                                 <div className="Counter mr-3">
                                     <div className="Decrement Ctrl-btn" onClick={this.DecreaseItem}>-</div>
                                     <div className="Count">
-                                        <div className="Count-num">{ this.state.show ? <span>{ this.state.clicks }</span> : '' }</div>
+                                        <div className="Count-num">{this.state.show ? <span>{this.state.clicks}</span> : ''}</div>
                                     </div>
                                     <div className="Increment Ctrl-btn" onClick={this.IncrementItem}>+</div>
                                 </div>
                                 <button className="Buy-btn mr-3">Buy</button>
                                 <span>in stock</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Product-info">
+                        <ul className="Nav-pills">
+                            <div className="Line"></div>
+                            <li>
+                                <a href="#" id="Open-desc" onClick={openDesc}>Description</a>
+                            </li>
+                            <li>
+                                <a href="#" id="Open-about" onClick={openAbout}>About</a>
+                            </li>
+                        </ul>
+                        <div className="Product-info-content">
+                            <div id="Description">
+                                <span>Price: 3.00 AZN</span>
+                            </div>
+                            <div id="About" className="d-none">
+                                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque laboriosam accusamus dolores quidem necessitatibus ab. At eos quis architecto ad exercitationem voluptatibus quibusdam dolor asperiores nobis? Temporibus quas nihil dignissimos.</span>
                             </div>
                         </div>
                     </div>
