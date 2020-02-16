@@ -104,16 +104,16 @@ class Product extends Component {
                             <div className="Header-wrapper"></div>
                         </div>
                         <div className="row ProductList">
-                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                <div className="col-sm-12 col-md-6 col-lg-3">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                <div className="col-sm-12 col-md-6 col-lg-3">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                <div className="col-sm-12 col-md-6 col-lg-3">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                <div className="col-sm-12 col-md-6 col-lg-3">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
                             </div>
