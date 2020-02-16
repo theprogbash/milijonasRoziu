@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Product.css';
 import Breadcrumb from '../common/Breadcrumb';
 import { GlassMagnifier } from "react-image-magnifiers";
+import ProductCard from "../common/ProductCard";
 
 class Product extends Component {
     constructor(props) {
@@ -96,6 +97,26 @@ class Product extends Component {
                                 <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque laboriosam accusamus dolores quidem necessitatibus ab. At eos quis architecto ad exercitationem voluptatibus quibusdam dolor asperiores nobis? Temporibus quas nihil dignissimos.</span>
                             </div>
                         </div>
+                    </div>
+                    <div className="Recently-product">
+                        <div className="Recently-product-header">
+                            <h5>Best Seller</h5>
+                            <div className="Header-wrapper"></div>
+                        </div>
+                        <div className="row ProductList">
+                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                    <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
+                                </div>
+                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                    <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
+                                </div>
+                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                    <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
+                                </div>
+                                <div className="col-sm-12 col-md-12 col-lg-3">
+                                    <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>

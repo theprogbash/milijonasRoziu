@@ -19,22 +19,22 @@ class Catalog extends Component{
                                 <span>Showing 6 of 50 products</span>
                             </div>
                             <div className="row ProductList">
-                                <div className="col-lg-4">
+                                <div className="col-sm-12 col-md-12 col-lg-4">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-sm-12 col-md-12 col-lg-4">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-sm-12 col-md-12 col-lg-4">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-sm-12 col-md-12 col-lg-4">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-sm-12 col-md-12 col-lg-4">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-sm-12 col-md-12 col-lg-4">
                                     <ProductCard ProductName={"The Autumn Leaves"} ProductPrice={"250.00"} ProductImgSrc={require('../assets/img/flower1.jpg')}/>
                                 </div>
                             </div>
